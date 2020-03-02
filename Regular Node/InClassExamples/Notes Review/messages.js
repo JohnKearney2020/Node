@@ -2,18 +2,17 @@
 //                Exporting a generic module that is an object
 //====================================================================
 // var log = {
-//     info: function (info) { 
+//     info: function (info) {
 //         console.log('Info: ' + info);
 //     },
-//     warning:function (warning) { 
+//     warning:function (warning) {
 //         console.log('Warning: ' + warning);
 //     },
-//     error:function (error) { 
+//     error:function (error) {
 //         console.log('Error: ' + error);
 //     }
 // };
 // module.exports = log //this is *CRITICAL* to export this code so that other .js files can use the code.
-
 
 //====================================================================
 //                          Exporting Literals
@@ -55,10 +54,10 @@
 //====================================================================
 //                   Export function as a class
 //====================================================================
-module.exports = function (firstName, lastName) { //similar to what we just did, but the function is a class, too
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.fullName = function () { 
-        return this.firstName + ' ' + this.lastName;
-    }
-}
+// module.exports = function (firstName, lastName) { //similar to what we just did, but the function is a class, too
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.fullName = function () {
+//         return this.firstName + ' ' + this.lastName;
+//     }
+// }

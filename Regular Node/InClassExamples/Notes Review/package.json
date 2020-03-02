@@ -1,0 +1,14 @@
+{
+  "name": "notes-review",
+  "version": "1.0.0",
+  "description": "working my way thru the npm notes",
+  "main": "fileSystem.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}

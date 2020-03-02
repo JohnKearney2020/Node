@@ -1,7 +1,7 @@
 //====================================================================
 //                          Loading a Local Module
 //====================================================================
-// var myLogModule = require('./messages.js'); //this 'imports' the log module we created. It sets the variable 'myLogModule' equal to the 
+// var myLogModule = require('./messages.js'); //this 'imports' the log module we created. It sets the variable 'myLogModule' equal to the
 // //log module we created in nodeFirstModule.js
 
 // //the log module is an object, and here we call the .info method which will print the string we feed it to the console.
@@ -41,6 +41,6 @@
 //====================================================================
 //                   Export function as a class
 //====================================================================
-var person = require('./messages.js'); //this imports our function object class
-var person1 = new person('James', 'Bond'); //this creates a new person object
-console.log(person1.fullName()); //James Bond, this calls the fullName function in the person1 class
+// var person = require('./messages.js'); //this imports our function object class
+// var person1 = new person('James', 'Bond'); //this creates a new person object
+// console.log(person1.fullName()); //James Bond, this calls the fullName function in the person1 class
