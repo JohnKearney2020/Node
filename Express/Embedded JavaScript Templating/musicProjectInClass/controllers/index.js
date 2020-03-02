@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-let data = require('../public/data'); //right now this index.js file is in the controllers folder, so we need to go up and then down into data.
+let data = require('../data/data.json'); //right now this index.js file is in the controllers folder, so we need to go up and then down into data.
 router.get('/', (req,res) => {
     // console.log('test');
     // console.log(data.speakers[0].artwork);
