@@ -1,0 +1,76 @@
+{
+    "cards": [{
+        "cardname": "Ashiok, Nightmare Muse",
+        "manacost": "3BlueBlack",
+        "cmc": 5,
+        "types": "Legendary Planeswalker — Ashiok",
+        "cardtext":
+        "+1: Create a 2/3 blue and black Nightmare creature token with \"Whenever this creature attacks or blocks, each opponent exiles the top two cards of their library.\" \n−3: Return target nonland permanent to its owner's hand, then that player exiles a card from their hand. \n−7: You may cast up to three face-up cards your opponents own from exile without paying their manacosts.",
+        "loyalty": 5,
+        "pt":"",
+        "expansion": "Theros Beyond Death",
+        "rarity": "Mythic Rare",
+        "cardnumber": 208,
+        "cardartfilename": "208.png",
+        "artist": "Raymond Swanland"
+    }, {
+        "cardname": "Ashiok, Sculptor of Fears",
+        "manacost": "4BlueBlack",
+        "cmc": 6,
+        "types": "Legendary Planeswalker — Ashiok",
+        "cardtext":
+        "+2: Draw a card. Each player puts the top two cards of their library into their graveyard.\n−5: Put target creature card from a graveyard onto the battlefield under your control.\n−11: Gain control of all creatures target opponent controls.",
+        "loyalty": 4,
+        "pt":"",
+        "expansion": "Theros Beyond Death",
+        "rarity": "Mythic Rare",
+        "cardnumber": 274,
+        "cardartfilename": "274.png",
+        "artist": "Daarken"
+    }, {
+        "cardname": "Athreos, Shroud-Veiled",
+        "manacost": "4WhiteBlack",
+        "cmc": 6,
+        "types": "Legendary Enchantment Creature — God",
+        "cardtext":
+        "Indestructible\nAs long as your devotion to white and black is less than seven, Athreos isn't a creature.\nAt the beginning of your end step, put a coin counter on another target creature.\nWhenever a creature with a coin counter on it dies or is put into exile, return that card to the battlefield under your control.",
+        "loyalty": "",
+        "pt":"4/7",
+        "expansion": "Theros Beyond Death",
+        "rarity": "Mythic Rare",
+        "cardnumber": 269,
+        "cardartfilename": "269.png",
+        "artist": "Igor Kieryluk"
+    }, {
+        "cardname": "Calix, Destiny's Hand",
+        "manacost": "2GreenWhite",
+        "cmc": 4,
+        "types": "Legendary Planeswalker — Calix",
+        "cardtext":
+        "+1: Look at the top four cards of your library. You may reveal an enchantment card from among them and put that card into your hand. Put the rest on the bottom of your library in a random order.\n−3: Exile target creature or enchantment you don't control until target enchantment you control leaves the battlefield.\n−7: Return all enchantment cards from your graveyard to the battlefield.",
+        "loyalty": 4,
+        "pt":"",
+        "expansion": "Theros Beyond Death",
+        "rarity": "Mythic Rare",
+        "cardnumber": 211,
+        "cardartfilename": "211.png",
+        "artist": "Magali Villeneuve"
+    }, {
+        "cardname": "Elspeth, Sun's Nemesis",
+        "manacost": "2WhiteWhite",
+        "cmc": 4,
+        "types": "Legendary Planeswalker — Elspeth",
+        "cardtext":
+        "−1: Up to two target creatures you control each get +2/+1 until end of turn.\n−2: Create two 1/1 white Human Soldier creature tokens.\n−3: You gain 5 life.\nEscape—4WhiteWhite, Exile four other cards from your graveyard. (You may cast this card from your graveyard for its escape cost.)",
+        "loyalty": 5,
+        "pt":"",
+        "expansion": "Theros Beyond Death",
+        "rarity": "Mythic Rare",
+        "cardnumber": 14,
+        "cardartfilename": "14.png",
+        "artist": "Livia Prima"
+    }]
+}
+
+
+
