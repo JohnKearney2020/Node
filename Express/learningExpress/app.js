@@ -25,10 +25,10 @@ app.use(express.static('public')); //we need to create a public folder, and then
 
 //creating our first route/handler
 // '/' just means the homepage, the second arg is a callback function - C++ sends these arguments to this function
-// app.get('/', (request, response) => {
-// 	console.log(request);
-// 	response.send('hello world');
-// });
+app.get('/', (request, response) => {
+	console.log(request);
+	response.send('hello world');
+});
 
 //if we request the about page
 // app.get('/aboutus', (req, res) => {
