@@ -55,8 +55,10 @@ app.get('/greeting', (req, res) => {
 
 //
 app.get('/year', (req, res) => {
-	let yearBorn = req.param('yearBorn');
-	res.send(`You were born in the year ${yearBorn}`);
+	let age = req.param('age');
+	let date = new Date(); //the current date
+	let currentYear = date.getFullYear();
+	res.send(`You were born in the year ${currentYear - age}`);
 });
 
 //----------------------------------------------------
