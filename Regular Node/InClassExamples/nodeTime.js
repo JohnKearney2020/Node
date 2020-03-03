@@ -4,13 +4,14 @@ const fs = require('fs'); // a C++ feature that allows us to acess the file syst
 
 let fileContent = 'lorem lorem dag dah';
 
-fs.writeFile('ourFile.txt', fileContent, (error) =>{ //callback function handles any errors in writing to the file
-    if(error) {
-        console.error(error.message);
-        return
-    }
-    console.log('file was saved: ourFile.txt');
-})
+fs.writeFile('ourFile.txt', fileContent, (error) => {
+	//callback function handles any errors in writing to the file
+	if (error) {
+		console.error(error.message);
+		return;
+	}
+	console.log('file was saved: ourFile.txt');
+});
 
 // let fileName = './myString.js';
 // let fileName = './123.js';
