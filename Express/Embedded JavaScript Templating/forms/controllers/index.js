@@ -1,29 +1,27 @@
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
-//request => server handles req uest => middlewate => handler
-//this makes body-parser info availble to all routes below it
+//request => server handles request => middleware=> handler
 router.use(bodyParser.urlencoded({extended: false}));
-
 router.get('/', (req, res) => {
-    res.render('index');
+    res.render('index')
 })
-
 router.post('/', (req, res) => {
-    console.log(req.body); //req.body is where all the data from the form is stored
+    console.log(req.body);
     let email = req.body.email;
     let isValid = req.body.isValid;
-    let password = req.body.password;
     let isTrue = req.body.isTrue;
-
-    // res.send(`email: ${email} password: ${password}`);
+    let password = req.body.password;
+    // res.send(`email: ${email} isValid: ${isValid} isTrue: ${isTrue} password ${password}`)
     res.render('index', {
-        // email: email, OR below
-        email,
-        isValid,
-        password,
-        isTrue
+        email : email,
+        isValid: isValid,
+        isTrue: isTrue,
+        password: password
     })
 })
-
 module.exports = router;
+//first Name
+//last Name
+//email address
+//phone number
