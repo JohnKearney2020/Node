@@ -31,9 +31,15 @@ header {
 }
 
 #mainNavbar .navbar-brand {
-	color: black;
+	/* color: black; */
 	font-size: 1.5rem;
+	color: rgb(217, 231, 14);
 }
+
+/* #mainNavbar .navbar-brand:hover {
+	font-size: 1.5rem;
+	color: rgb(0, 230, 31);
+} */
 
 #mainNavbar .nav-link {
 	/* color: black; */
@@ -48,7 +54,12 @@ header {
 body {
 	background: url('/images/background/indexBackground.png');
 	background-size: cover;
-	/* background-position: center center; */
+	background-position: center center;
 	/* background-size: contain; */
 	/* background-repeat: no-repeat; */
-}
+} 
+
+/* .cardPictures {
+	background: url('/images/background/indexBackground.png');
+	background-size: cover;
+} */

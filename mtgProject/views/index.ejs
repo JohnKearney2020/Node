@@ -27,7 +27,9 @@
     
     <!-- ---------------------------------------------------- NAVBAR ------------------------------------------------------------ -->
     <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 sticky-top">
-        <!-- <a href="#" class="navbar-brand">HUYNH</a> -->
+        <a href="#" class="navbar-brand">
+            <img src="/images/setSymbol/THB.png" alt="" height="42" width="42"> Theros - Beyond Death
+        </a>
         <!-- data-toggle collapse lets it know it's going to collapse something -->
         <!-- the data-target tells it what it is going to collapse -->
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle Navigation">
@@ -65,7 +67,7 @@
     </nav>
     <!-- ---------------------------------------------------- End of Navbar ----------------------------------------------------- -->
     
-    <div class="cardpictures my-3 row">
+    <div class="cardPictures my-3 row">
         <!-- cardimages is the object from index.js that contains an array of .png filenames of each card -->
         <% cardimages.forEach((imgFileName) => { %>
             <% let minusPng = imgFileName.substring(0, imgFileName.length - 4) %>;
