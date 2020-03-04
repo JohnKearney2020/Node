@@ -18,5 +18,5 @@ app.use(require('./routes/index.js'));
 app.use(require('./routes/cardInfo.js'));
 
 app.listen(5000, () => {
-    console.log('listening on port 5000');
-})
+	console.log('listening on port 5000');
+});

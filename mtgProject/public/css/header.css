@@ -1,0 +1,46 @@
+header {
+	height: 500px;
+	/* height: 30vh; */
+	width: 100%;
+}
+
+.childPosition {
+	top: 0px;
+	left: 0px;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#mainNavbar {
+	font-size: 1.5rem;
+	font-weight: 400;
+	background-color: rgb(24, 24, 24);
+}
+
+#mainNavbar .navbar-brand {
+	color: black;
+	font-size: 1.5rem;
+}
+
+#mainNavbar .nav-link {
+	/* color: black; */
+	color: rgb(217, 231, 14);
+}
+/* below we change the color when we hover over the nav links */
+#mainNavbar .nav-link:hover {
+	color: rgb(0, 230, 31);
+	/* background: warning; */
+}
+
+body {
+	background: url('/images/background/indexBackground.png');
+	background-size: cover;
+	/* background-position: center center; */
+	/* background-size: contain; */
+	/* background-repeat: no-repeat; */
+}
