@@ -12,10 +12,12 @@ app.set('view engine', 'ejs');
 
 //set up route
 //index.js
-app.use(require('./controllers/index.js'));
+app.use(require('./controllers/index'));
 //speakers.js
-app.use(require('./controllers/speakers.js'));
+app.use(require('./controllers/speakers'));
+app.use(require('./controllers/feedback'));
+app.use(require('./controllers/api'));
 
 app.listen(4000, () => {
-    console.log('listening on port 4000');
-})
+	console.log('listening on port 4000');
+});
