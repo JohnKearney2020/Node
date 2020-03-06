@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Mustache Page</title>
+    {{!  }}
+</head>
+<body>
+    <h1>Hello Mustache!</h1>
+    {{! if we pass name into the double curly braces, it is the key of the object we passed into this page in app.js}}
+    {{! not surprisingly, it will return the value of that key and place it in our page }}
+    Name is {{name}} {{! John Doe }} and lives on {{address.street}}, {{address.city}} {{address.state}}.
+    {{!  }}
+</body>
+</html>
