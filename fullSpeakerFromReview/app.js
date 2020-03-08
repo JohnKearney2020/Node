@@ -11,13 +11,11 @@ app.set('view engine', 'ejs');
 //speakers.ejs
 
 //set routes
-
-// index.js
-app.use(require('./controllers/index'));
-app.use(require('./controllers/speaker'));
-app.use(require('./controllers/feedback'));
-app.use(require('./controllers/api'));
-// speakers
+app.use(require('./controllers/index.js'));
+app.use(require('./controllers/speaker.js'));
+//added the routes below for the feedback form
+app.use(require('./controllers/feedback.js'));
+app.use(require('./controllers/api.js'));
 
 app.listen(3000, () => {
 	console.log('listening on port 3000');
