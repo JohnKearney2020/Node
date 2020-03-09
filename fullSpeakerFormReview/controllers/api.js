@@ -63,7 +63,7 @@ router.delete('/api/:id', (req, res) => {
 	feedbackData.splice(req.params.id, 1); //remove the element of feedbackData corresponding to /:id
 	//write to the feedback json file again with our new data sans the element we just removed
 	//feedbackData is a JS object, we need to stringify it to put the info back into the file
-	fs.writeFile('./data/feedback.json', JSON.stringify(feedbackData), 'utf8', (err) => {
+	fs.writeFile('data/feedback.json', JSON.stringify(feedbackData), 'utf8', (err) => {
 		if (err) {
 			console.log(err);
 		}
