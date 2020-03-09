@@ -51,6 +51,27 @@ form.addEventListener('submit', (e) => {
 		});
 });
 
+//===========================================================================
+// 		Event Listener for red 'X' buttons on the feedback elements
+//===========================================================================
+//instead of putting the event listener on each and every button, we will put it on the div that contains the buttons
+document.querySelector('.feedback-messages').addEventListener('click', (e) => {
+	//if the little red x icons gets clicked.... better way would be to do the whole button, but the button was not set up to wrap the ID into it
+	if (e.target.className == 'glyphicon glyphicon-remove') {
+		//if the target of the click is the little icon we want
+		//fetch with delete method
+		fetch('/api/' + e.target.id, {
+			method: 'DELETE'
+		})
+			.then((response) => {
+				return response.json();
+			})
+			.then((feedbackData) => {
+				updateFeedback(feedbackData);
+			});
+	}
+});
+
 //=======================================================================================================
 //               				 Auto Populate Previous Feedback Elements
 //=======================================================================================================

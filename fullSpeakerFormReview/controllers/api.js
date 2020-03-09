@@ -53,4 +53,22 @@ router.post('/api', (req, res) => {
 	});
 });
 
+//=============================================================================================================
+//                     						Feedback Delete Buttons
+//=============================================================================================================
+//this is for when users click the red 'X' button on the feedback page.
+//as the HTML feedback elements are created, they have an ID matching their 'key', or index in the feedbackData array. This corresponds to
+//the /:id
+router.delete('/api/:id', (req, res) => {
+	feedbackData.splice(req.params.id, 1); //remove the element of feedbackData corresponding to /:id
+	//write to the feedback json file again with our new data sans the element we just removed
+	//feedbackData is a JS object, we need to stringify it to put the info back into the file
+	fs.writeFile('./data/feedback.json', JSON.stringify(feedbackData), 'utf8', (err) => {
+		if (err) {
+			console.log(err);
+		}
+		res.json(feedbackData); //after feedback is deleted we will need to show the user the feedback again, sans the deleted feedback
+	});
+});
+
 module.exports = router;
