@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    new dish
+<!--  -->
+    <form action="/newdish" method="POST">
+        <select name=""> <!-- need a name so the value gets sent in the header -->
+            <option value="">Select Category</option>
+            <% categories.forEach((record) => { %>
+                <option value="<%= record.id %>"><%= record.name %></option>
+            <% }) %>
+
+
+            <!-- <option value="1">Testing Options</option>
+            <option value="2">Testing Options2</option>
+            <option value="3">Testing Options3</option> -->
+        </select>
+        title: <input type="text" name="title" placeholder="title"><br>
+        description: <input type="text" name="description" placeholder="description"><br>
+        price: <input type="text" name="price" placeholder="price"><br>
+        imageURL: <input type="text" name="imageURL" placeholder="image url"><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
