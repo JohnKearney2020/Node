@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Edit Blogs
+
+    <form action="/editblogs" method="POST">
+      <input type="text" placeholder="title" name="title">
+
+      <!-- author dropdown -->
+      <select name="author" id="">
+        <!-- in editblogs.js we are sending author info -->
+        <% authors.forEach( (eachAuthor) => { %>
+          <option value="<%= eachAuthor.id %>"><%= eachAuthor.name %></option>
+        <% }) %>
+      </select>
+
+      <!-- categories dropdown -->
+      <select name="category" id="">
+        <% categories.forEach( (eachCategory) => { %>
+          <% if (eachCategory.name != '') { %>
+          <option value="<%= eachCategory.id %>"><%= eachCategory.name %></option>
+          <% } %> 
+        <% }) %>
+      </select>
+
+      <textarea name="body" cols="30" rows="10">
+
+      </textarea>
+
+      <input type="submit" value="submit">
+
+    
+    
+    </form>
+  </body>
+</html>
