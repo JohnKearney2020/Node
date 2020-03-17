@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   author.associate = function(models) {
     // associations can be defined here
-    author.hasMany(models.blogs, {foreignKey: author_id}); //an author can have many blogs
+    author.hasMany(models.blogs, {foreignKey: 'author_id'}); //an author can have many blogs
+    // author.hasMany(models.dctest, {foreignKey: 'author_id'});
   };
   return author;
 };
