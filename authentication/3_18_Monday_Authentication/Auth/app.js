@@ -30,9 +30,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 // create a login form, and registration form
 // create a database
 // create a record in our table for the user
-//===================================
-//         Login
-//===================================
+
+
+
+//=============================================================
+//                           Login
+//=============================================================
 app.get('/login', (req,res) => {
   // res.send('login')
   res.render('login.ejs');
@@ -63,16 +66,64 @@ app.post('/login', (req,res) => {
   }))
 })
 
+//=============================================================
+//                           Logout
+//=============================================================
+app.get('/logout', (req,res) => {
+  req.session.destroy((err) => { //this will destroy the login cookie and log the user out
+    res.redirect('/');
+  })
+})
+
+
+//=============================================================
+//                         Error route
+//=============================================================
 app.get('/error', (req,res) => {
     res.send('error: username or password is incorrect');
 })
 
-app.get('/admin', (req,res) => {
+
+//=============================================================
+//                        Admin Page
+//=============================================================
+//we need to create our own custom middleware. How middleware works below:
+// middleware server recieves request => middleware => route to appropriate handler
+//we are going to create our own function, auth, that will execute before the normal callback function.
+//    *it will look for a valid cookie, that could only exist if a legitimate user with a valid password had loggedin
+//    *depending on if it can find that cookie or not, it will route users to a specific page
+
+let auth = (req, res, next) => {
+  if(req.session.userid) { //if the proper cookie exists
+    next(); //we will send the request and response to the callback function in the app.get('/admin') route above.
+  } else { //if that cookie does not exist, we will redirect them.
+    res.redirect('/login');
+  }
+}
+
+app.get('/admin', auth, (req,res) => {
   res.send('protected page');
 })
-//===================================
-//         Registration
-//===================================
+
+//===============================================
+//        Protecting Child Routes of admin
+//===============================================
+//we can use a wildcard and our 'auth' function to protect all child routes of /admin
+//we need to use app.all()
+app.all('/admin/*', auth, (req,res,next) => {
+  next();
+})
+
+app.get('/admin/dashboard', (req,res) => { //notice that we don't need the 'auth' function since this is a child of /admin/
+//and we used the app.all('/admin/*'), which routes the user to here, in conjunction with 'auth' already
+  res.send('This is a protected site, child of admin');
+})
+
+
+
+//=============================================================
+//                        Registration
+//=============================================================
 app.get('/registration', (req,res) => {
   res.render('registration.ejs');
 })
@@ -99,3 +150,4 @@ app.post('/registration', (req,res) => {
 app.listen(3000, () => {
   console.log('Listening on 3000');
 });
+
